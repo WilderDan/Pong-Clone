@@ -33,9 +33,9 @@ func _physics_process(delta):
 			is_touch_move = false
 			
 	# Keyboard
-	elif Input.is_action_pressed("ui_down") or Input.is_key_pressed(KEY_S):
+	elif Input.is_action_pressed("ui_down"):
 		velocity.y = speed
-	elif Input.is_action_pressed("ui_up") or Input.is_key_pressed(KEY_W):
+	elif Input.is_action_pressed("ui_up"):
 		velocity.y = -speed
 	else:
 		velocity.y = 0
