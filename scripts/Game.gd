@@ -19,6 +19,6 @@ func _on_Ball_hit_paddle():
 	$BallHit.play()
 
 func _on_Ball_out_of_bounds():
-	# is ball still processing???	
+	$Ball.velocity = Vector2(0,0)
 	$Gameover.play()
 	$HUD/Menu.show()
