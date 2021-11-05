@@ -3,7 +3,8 @@ extends KinematicBody2D
 signal hit_paddle
 signal out_of_bounds
 
-export var speed = 800
+export var speed = 400
+export var speedUpPercent = 0.01
 var velocity
 
 func _ready():
@@ -29,6 +30,7 @@ func _physics_process(delta):
 	if collision:
 		if collision.collider.is_in_group("paddles"):
 			emit_signal("hit_paddle")
+			velocity *= 1 + speedUpPercent
 		velocity = velocity.bounce(collision.normal)
 		
 func _on_VisibilityNotifier2D_screen_exited():

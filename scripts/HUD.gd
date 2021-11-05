@@ -3,7 +3,8 @@ extends CanvasLayer
 signal start_game
 
 func _on_Start_pressed():
-	$Mode.hide()
+	$Mode/Background.hide()
+	$Mode/VBoxContainer.hide()
 	emit_signal("start_game")
 
 func _on_Main_Menu_Button_pressed():

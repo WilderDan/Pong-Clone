@@ -1,9 +1,6 @@
 extends Node
 
 var score
-
-func _ready():	
-	randomize()
 	
 func _on_HUD_start_game():
 	score = 0
@@ -24,4 +21,5 @@ func _on_Ball_out_of_bounds():
 	$Ball.velocity = Vector2(0,0)
 	$Paddle.hide()
 	$Gameover.play()
-	$HUD/Mode.show()
+	$HUD/Mode/Background.show()
+	$HUD/Mode/VBoxContainer.show()
