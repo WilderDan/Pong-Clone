@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/VS.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/PvP_HUD.tscn" type="PackedScene" id=3]
+
+[node name="VS" instance=ExtResource( 2 )]
+
+[node name="HUD" parent="." index="1" instance=ExtResource( 3 )]
+
+[node name="RightPaddle" parent="." index="11" instance=ExtResource( 1 )]
+position = Vector2( 950, 354 )
+id = 2
+
+[node name="LeftPaddle" parent="." index="13" instance=ExtResource( 1 )]
+position = Vector2( 0, 354 )
+
+[connection signal="start_game" from="HUD" to="." method="_on_HUD_start_game"]

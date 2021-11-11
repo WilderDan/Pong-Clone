@@ -18,8 +18,10 @@ func _on_Ball_hit_paddle():
 	$BallHit.play()
 
 func _on_Ball_out_of_bounds():
-	$Ball.velocity = Vector2(0,0)
-	$Paddle.hide()
 	$Gameover.play()
-	$HUD/Mode/Background.show()
-	$HUD/Mode/VBoxContainer.show()
+	update_score(0)
+	$Ball.serve($ServePosition.position)
+
+func _process(delta):
+	if Input.is_action_pressed("ui_cancel"):
+		get_tree().change_scene("res://scenes/Main.tscn")

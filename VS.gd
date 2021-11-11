@@ -48,7 +48,6 @@ func _on_Ball_out_of_bounds():
 		
 	if leftScore == 10 or rightScore == 10:
 		gameOver()
-		
 
 func _on_Ball_hit_paddle():
 	$BallHit.play()
@@ -62,3 +61,7 @@ func gameOver():
 	$Gameover.play()
 	$HUD/Mode/Background.show()
 	$HUD/Mode/VBoxContainer.show()
+
+func _process(delta):
+	if Input.is_action_pressed("ui_cancel"):
+		get_tree().change_scene("res://scenes/Main.tscn")

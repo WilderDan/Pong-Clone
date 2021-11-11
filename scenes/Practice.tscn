@@ -28,10 +28,10 @@ __meta__ = {
 [node name="HUD" parent="." instance=ExtResource( 6 )]
 
 [node name="LeftPaddlePosition" type="Position2D" parent="."]
-position = Vector2( 50, 354 )
+position = Vector2( 0, 354 )
 
 [node name="Paddle" parent="." instance=ExtResource( 5 )]
-position = Vector2( 50, 354 )
+position = Vector2( 0, 354 )
 
 [node name="ServePosition" type="Position2D" parent="."]
 position = Vector2( 720, 384 )
@@ -41,10 +41,9 @@ position = Vector2( 960, 0 )
 rotation = 1.5708
 
 [node name="TopBoundary" parent="." instance=ExtResource( 2 )]
-position = Vector2( 50, 0 )
 
 [node name="BottomBoundary" parent="." instance=ExtResource( 2 )]
-position = Vector2( 50, 758 )
+position = Vector2( 0, 758 )
 
 [node name="Ball" parent="." instance=ExtResource( 7 )]
 position = Vector2( 214.32, 158.992 )

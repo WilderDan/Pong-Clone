@@ -20,14 +20,13 @@ margin_bottom = 326.493
 
 [node name="Title" parent="Mode/VBoxContainer" index="0"]
 margin_right = 313.0
-text = "VS"
+text = "Sample"
 
 [node name="Menu" parent="Mode/VBoxContainer" index="1"]
 margin_right = 313.0
 
 [node name="Controls" parent="Mode/VBoxContainer" index="2"]
 margin_right = 313.0
-margin_bottom = 605.0
 text = "Controls
 
 Left side: W, S
